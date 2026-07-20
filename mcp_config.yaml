@@ -1,0 +1,67 @@
+# MCP Servers 配置文件
+# 定义所有可用的 MCP servers
+
+servers:
+  # 天气服务（使用自定义 Python 实现）
+  weather:
+    name: "OpenWeather MCP Server"
+    command: "python"
+    args: ["tools/mcp_servers/openweather_server.py"]
+    env:
+      OPENWEATHER_API_KEY: "${OPENWEATHER_API_KEY}"
+    description: "OpenWeather 天气查询服务（当前天气、预报、坐标查询）"
+    enabled: true
+    verified: true  # 已验证 API Key: your_openweather_api_key
+
+  # 百度搜索
+  brave_search:
+    name: "Brave Search MCP Server"
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-brave-search"]
+    env:
+      BRAVE_API_KEY: "${BRAVE_SEARCH_API_KEY}"
+    description: "网络搜索服务"
+    enabled: true
+
+  # 百度地图（国内推荐）
+  baidu_maps:
+    name: "Baidu Maps MCP Server"
+    command: "python"
+    args: ["tools/mcp_servers/baidu_maps_server.py"]
+    env:
+      BAIDU_MAPS_API_KEY: "${BAIDU_MAPS_API_KEY}"
+    description: "百度地图服务（地点搜索、路线规划、地址解析）"
+    enabled: true
+    verified: true  # 已验证 API Key: your_baidu_maps_api_key
+
+  # Google Maps（国外可选，国内不推荐）
+  google_maps:
+    name: "Google Maps MCP Server"
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-google-maps"]
+    env:
+      GOOGLE_MAPS_API_KEY: "${GOOGLE_MAPS_API_KEY}"
+    description: "Google 地图服务"
+    enabled: false  # 默认禁用
+
+  # 文件系统（本地）
+  filesystem:
+    name: "Filesystem MCP Server"
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-filesystem", "./knowledge"]
+    description: "本地文件系统访问"
+    enabled: true
+
+  # 自定义 MCP Server（示例）
+  custom:
+    name: "Custom Travel Data Server"
+    command: "python"
+    args: ["tools/mcp_servers/custom_travel_server.py"]
+    description: "自定义旅行数据服务"
+    enabled: false
+
+# MCP 客户端配置
+client:
+  timeout: 30  # 秒
+  max_retries: 3
+  log_level: "INFO"

@@ -1,0 +1,41 @@
+# Secrets & local env
+.env
+.env.local
+.env.*.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Local data / runtime
+chroma_db/
+memory/data/
+logs/
+*.db
+*.db-journal
+ltm_test.db
+
+# IDE / OS / local agent config
+.DS_Store
+.idea/
+.vscode/
+*.swp
+Untitled/
+.claude/settings.local.json
+.agents/skills/
+.claude/skills/
+
+# Streamlit / caches
+.streamlit/secrets.toml
+*.log

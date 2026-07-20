@@ -1,0 +1,112 @@
+{
+  "destination": "丽江",
+  "region": "云南",
+  "description": "丽江是世界文化遗产古城，以纳西族东巴文化闻名于世。玉龙雪山、泸沽湖等自然景观与古城人文交相辉映。",
+  "highlights": [
+    "丽江古城",
+    "玉龙雪山",
+    "束河古镇",
+    "泸沽湖",
+    "纳西古乐"
+  ],
+  "best_time_to_visit": {
+    "recommended_months": [3, 4, 5, 9, 10, 11],
+    "peak_season": [7, 8],
+    "avoid_months": [1, 2],
+    "reason": "春秋季节最佳，夏季人多，冬季雪山雪景美但冷"
+  },
+  "attractions": [
+    {
+      "name": "丽江古城",
+      "type": "历史文化",
+      "rating": 4.7,
+      "duration": "半天至1天",
+      "ticket_price": 50,
+      "description": "世界文化遗产，纳西族聚居地，四方街是核心"
+    },
+    {
+      "name": "玉龙雪山",
+      "type": "自然风光",
+      "rating": 4.8,
+      "duration": "1天",
+      "ticket_price": 100,
+      "description": "海拔4680米，可乘索道登顶冰川公园"
+    },
+    {
+      "name": "束河古镇",
+      "type": "古镇体验",
+      "rating": 4.5,
+      "duration": "半天",
+      "ticket_price": 30,
+      "description": "比大研古城更安静，适合悠闲游览"
+    },
+    {
+      "name": "蓝月谷",
+      "type": "自然风光",
+      "rating": 4.6,
+      "duration": "2-3小时",
+      "ticket_price": 0,
+      "description": "玉龙雪山脚下，湖水湛蓝如月"
+    },
+    {
+      "name": "泸沽湖",
+      "type": "自然风光",
+      "rating": 4.9,
+      "duration": "2天",
+      "ticket_price": 70,
+      "description": "摩梭人母系文化，高原明珠"
+    }
+  ],
+  "food": [
+    {
+      "name": "丽江粑粑",
+      "type": "小吃",
+      "price_range": "10-20元",
+      "description": "纳西族传统糕点"
+    },
+    {
+      "name": "鸡豆凉粉",
+      "type": "小吃",
+      "price_range": "10-15元",
+      "description": "丽江特色，清爽可口"
+    },
+    {
+      "name": "纳西烤鱼",
+      "type": "主菜",
+      "price_range": "50-80元",
+      "description": "传统烤制，香料丰富"
+    },
+    {
+      "name": "丽江腊排骨",
+      "type": "主菜",
+      "price_range": "60-100元",
+      "description": "腌制排骨火锅，当地特色"
+    }
+  ],
+  "transportation": {
+    "airport": "丽江三义机场",
+    "train_station": "丽江站",
+    "local_transport": ["公交", "出租车", "包车"],
+    "tips": "古城内禁止机动车，建议步行或乘电瓶车"
+  },
+  "accommodation": {
+    "budget": "100-300元/晚，古城周边客栈",
+    "mid_range": "300-600元/晚，古城内特色客栈",
+    "luxury": "600+元/晚，雪山度假酒店"
+  },
+  "budget_reference": {
+    "budget_travel": "300-500元/天",
+    "comfortable": "500-800元/天",
+    "luxury": "800+元/天"
+  },
+  "tips": [
+    "高海拔地区注意防晒和保暖",
+    "玉龙雪山需提前预订索道票",
+    "古城晚上热闹，注意作息",
+    "尊重纳西族和摩梭人习俗"
+  ],
+  "metadata": {
+    "last_updated": "2026-06-01",
+    "source": "官方旅游信息"
+  }
+}

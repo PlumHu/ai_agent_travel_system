@@ -1,0 +1,71 @@
+{
+  "destination": "大理",
+  "region": "云南",
+  "description": "大理是一座千年古城,以苍山洱海的自然风光和白族文化著称。",
+  "best_season": "3-5月、9-11月",
+  "avg_temperature": {
+    "spring": "15-20°C",
+    "summer": "20-25°C",
+    "autumn": "15-20°C",
+    "winter": "5-15°C"
+  },
+  "attractions": [
+    {
+      "name": "洱海",
+      "type": "自然景观",
+      "description": "云南第二大淡水湖，可骑行环湖，欣赏日出日落",
+      "suggested_time": "半天至1天",
+      "ticket": "免费"
+    },
+    {
+      "name": "大理古城",
+      "type": "历史文化",
+      "description": "保存完好的白族古城，有众多特色店铺和美食",
+      "suggested_time": "半天",
+      "ticket": "免费"
+    },
+    {
+      "name": "苍山",
+      "type": "自然景观",
+      "description": "大理著名山脉，可乘索道登山，俯瞰洱海全景",
+      "suggested_time": "半天",
+      "ticket": "索道往返280元"
+    }
+  ],
+  "food": [
+    {
+      "name": "白族三道茶",
+      "category": "饮品",
+      "description": "一苦二甜三回味，白族传统待客茶艺",
+      "price_range": "30-50元/人"
+    },
+    {
+      "name": "喜洲粑粑",
+      "category": "小吃",
+      "description": "酥脆可口的白族传统点心，有甜咸两种口味",
+      "price_range": "10-15元/个"
+    },
+    {
+      "name": "大理砂锅鱼",
+      "category": "主食",
+      "description": "洱海鲜鱼配当地蔬菜，汤鲜味美",
+      "price_range": "80-150元/锅"
+    }
+  ],
+  "accommodation": {
+    "budget": "青旅床位 50-80元/晚，民宿 150-300元/晚",
+    "mid_range": "特色客栈 300-600元/晚",
+    "luxury": "海景度假酒店 800-2000元/晚"
+  },
+  "transportation": {
+    "from_beijing": "飞机直飞约4小时，票价 800-2000元",
+    "from_shanghai": "飞机直飞约3.5小时，票价 600-1500元",
+    "local": "电动车租赁 50-80元/天，拼车 30-50元/人"
+  },
+  "tips": [
+    "紫外线强，注意防晒",
+    "早晚温差大，带好外套",
+    "洱海边风大，骑行注意安全",
+    "尊重当地白族文化和习俗"
+  ]
+}

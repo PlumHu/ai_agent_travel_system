@@ -1,0 +1,227 @@
+[
+  {
+    "id": "TC001",
+    "input": "我想6月去大理玩5天，预算5000元，喜欢美食和看风景",
+    "expected": {
+      "intent": "plan_trip",
+      "destination": "大理",
+      "budget": 5000,
+      "has_day_plan": true,
+      "budget_within_range": true
+    },
+    "category": "basic_planning",
+    "difficulty": "easy"
+  },
+  {
+    "id": "TC002",
+    "input": "三亚什么时候去人最少？天气好",
+    "expected": {
+      "intent": "recommend_time",
+      "destination": "三亚",
+      "has_best_periods": true,
+      "has_avoid_periods": true
+    },
+    "category": "time_recommendation",
+    "difficulty": "easy"
+  },
+  {
+    "id": "TC003",
+    "input": "我想春天去旅游，喜欢自然风光，预算3000元",
+    "expected": {
+      "intent": "recommend_destination",
+      "budget": 3000,
+      "has_recommendations": true
+    },
+    "category": "destination_recommendation",
+    "difficulty": "easy"
+  },
+  {
+    "id": "TC004",
+    "input": "帮我规划一个丽江4天3晚的行程，预算8000元，两个人，蜜月旅行，喜欢摄影和文化",
+    "expected": {
+      "intent": "plan_trip",
+      "destination": "丽江",
+      "budget": 8000,
+      "has_day_plan": true,
+      "budget_within_range": true
+    },
+    "category": "basic_planning",
+    "difficulty": "medium"
+  },
+  {
+    "id": "TC005",
+    "input": "我从上海出发，想去海边度假一周，预算10000元，不想去三亚（去过了）",
+    "expected": {
+      "intent": "recommend_destination",
+      "budget": 10000,
+      "has_recommendations": true
+    },
+    "category": "destination_recommendation",
+    "difficulty": "medium"
+  },
+  {
+    "id": "TC006",
+    "input": "大理几月份去最合适？我怕热，而且想避开人多的时候",
+    "expected": {
+      "intent": "recommend_time",
+      "destination": "大理",
+      "has_best_periods": true
+    },
+    "category": "time_recommendation",
+    "difficulty": "easy"
+  },
+  {
+    "id": "TC007",
+    "input": "我想国庆节去旅游，但不知道去哪里，预算5000，喜欢历史文化",
+    "expected": {
+      "intent": "recommend_destination",
+      "budget": 5000,
+      "has_recommendations": true
+    },
+    "category": "destination_recommendation",
+    "difficulty": "medium"
+  },
+  {
+    "id": "TC008",
+    "input": "我对海鲜过敏，想去大理玩，有什么需要注意的吗？",
+    "expected": {
+      "intent": "plan_trip",
+      "destination": "大理",
+      "health_info_present": true
+    },
+    "category": "health_aware",
+    "difficulty": "medium"
+  },
+  {
+    "id": "TC009",
+    "input": "周末两天能去哪里玩？从北京出发，预算2000以内",
+    "expected": {
+      "intent": "recommend_destination",
+      "budget": 2000,
+      "has_recommendations": true
+    },
+    "category": "destination_recommendation",
+    "difficulty": "medium"
+  },
+  {
+    "id": "TC010",
+    "input": "我想明年3月15号到3月20号去云南，两个人，预算15000，喜欢摄影、自然风光、民族文化，住好一点的酒店",
+    "expected": {
+      "intent": "plan_trip",
+      "destination": "云南",
+      "start_date": "2027-03-15",
+      "end_date": "2027-03-20",
+      "budget": 15000,
+      "has_day_plan": true,
+      "budget_within_range": true
+    },
+    "category": "basic_planning",
+    "difficulty": "hard"
+  },
+  {
+    "id": "TC011",
+    "input": "去旅游",
+    "expected": {
+      "intent": "recommend_destination",
+      "destination": null
+    },
+    "category": "vague_input",
+    "difficulty": "hard"
+  },
+  {
+    "id": "TC012",
+    "input": "你好",
+    "expected": {
+      "intent": "general_inquiry"
+    },
+    "category": "vague_input",
+    "difficulty": "easy"
+  },
+  {
+    "id": "TC013",
+    "input": "我想带80岁的奶奶和3岁的孩子一起去旅游，不能太累，预算1万",
+    "expected": {
+      "intent": "recommend_destination",
+      "budget": 10000,
+      "has_recommendations": true
+    },
+    "category": "special_needs",
+    "difficulty": "hard"
+  },
+  {
+    "id": "TC014",
+    "input": "三亚和大理哪个更适合蜜月旅行？",
+    "expected": {
+      "intent": "recommend_destination",
+      "has_recommendations": true
+    },
+    "category": "comparison",
+    "difficulty": "medium"
+  },
+  {
+    "id": "TC015",
+    "input": "我想元旦去哈尔滨看冰雪大世界，一个人，预算4000",
+    "expected": {
+      "intent": "plan_trip",
+      "destination": "哈尔滨",
+      "budget": 4000,
+      "has_day_plan": true
+    },
+    "category": "basic_planning",
+    "difficulty": "medium"
+  },
+  {
+    "id": "TC016",
+    "input": "推荐一个适合独自旅行的目的地，安全、文艺、适合拍照",
+    "expected": {
+      "intent": "recommend_destination",
+      "has_recommendations": true
+    },
+    "category": "destination_recommendation",
+    "difficulty": "easy"
+  },
+  {
+    "id": "TC017",
+    "input": "丽江现在去冷不冷？适合穿什么衣服？",
+    "expected": {
+      "intent": "recommend_time",
+      "destination": "丽江"
+    },
+    "category": "time_recommendation",
+    "difficulty": "easy"
+  },
+  {
+    "id": "TC018",
+    "input": "我有高血压，想去高原旅游，有什么建议？",
+    "expected": {
+      "intent": "plan_trip",
+      "health_info_present": true
+    },
+    "category": "health_aware",
+    "difficulty": "hard"
+  },
+  {
+    "id": "TC019",
+    "input": "帮我规划一个从上海到大理的完整行程，包括怎么去、住哪里、玩什么、吃什么，预算控制在6000以内，5天4晚",
+    "expected": {
+      "intent": "plan_trip",
+      "destination": "大理",
+      "budget": 6000,
+      "has_day_plan": true,
+      "budget_within_range": true
+    },
+    "category": "basic_planning",
+    "difficulty": "hard"
+  },
+  {
+    "id": "TC020",
+    "input": "什么时候去西藏最好？需要提前准备什么？",
+    "expected": {
+      "intent": "recommend_time",
+      "destination": "西藏",
+      "has_best_periods": true
+    },
+    "category": "time_recommendation",
+    "difficulty": "medium"
+  }
+]

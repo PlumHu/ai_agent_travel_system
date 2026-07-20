@@ -1,0 +1,42 @@
+# 核心框架（已验证兼容版本）
+langchain>=1.3.0
+langchain-openai>=1.3.0
+langgraph>=0.2.0
+
+# RAG 相关
+chromadb>=0.4.24
+sentence-transformers>=2.7.0
+rank-bm25>=0.2.2
+
+# Web 框架
+streamlit>=1.33.0
+streamlit-chat>=0.1.1
+
+# 工具依赖
+requests>=2.31.0
+beautifulsoup4>=4.12.3
+python-dotenv>=1.0.1
+duckduckgo-search>=5.0.0
+
+# 数据处理
+pandas>=2.2.0
+numpy>=1.26.0
+pydantic>=2.7.0
+
+# 可视化
+matplotlib>=3.8.0
+plotly>=5.21.0
+
+# 测试
+pytest>=8.2.0
+pytest-asyncio>=0.23.6
+
+# Browser-Use (浏览器自动化，可选)
+browser-use>=0.1.10
+playwright>=1.44.0
+
+# LLM SDK（OpenAI 兼容接口，支持 OpenAI/DeepSeek/英伟达 NIM/百度 OneAPI）
+openai>=1.30.0
+
+# 长期记忆可选后端（backend="mem0"；不装则默认 SqliteStore，自动降级）
+mem0ai>=0.1.0

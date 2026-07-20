@@ -1,0 +1,71 @@
+{
+  "destination": "三亚",
+  "region": "海南",
+  "description": "中国著名的热带海滨度假城市，拥有绝美的海滩和海洋资源。",
+  "best_season": "10月-次年4月",
+  "avg_temperature": {
+    "spring": "23-28°C",
+    "summer": "28-33°C",
+    "autumn": "25-30°C",
+    "winter": "20-26°C"
+  },
+  "attractions": [
+    {
+      "name": "亚龙湾",
+      "type": "海滩",
+      "description": "三亚最美海湾之一，沙滩细软，海水清澈",
+      "suggested_time": "半天",
+      "ticket": "免费"
+    },
+    {
+      "name": "蜈支洲岛",
+      "type": "海岛",
+      "description": "适合潜水、摩托艇等水上项目的热门海岛",
+      "suggested_time": "1天",
+      "ticket": "船票+门票 144元起"
+    },
+    {
+      "name": "南山文化旅游区",
+      "type": "文化景观",
+      "description": "南海观音像所在地，佛教文化圣地",
+      "suggested_time": "半天",
+      "ticket": "129元"
+    }
+  ],
+  "food": [
+    {
+      "name": "海鲜大餐",
+      "category": "海鲜",
+      "description": "龙虾、石斑鱼、螃蟹等新鲜海鲜",
+      "price_range": "200-500元/人"
+    },
+    {
+      "name": "海南椰子鸡",
+      "category": "主食",
+      "description": "用椰子水炖煮的鸡肉，清甜可口",
+      "price_range": "100-200元/锅"
+    },
+    {
+      "name": "清补凉",
+      "category": "甜品",
+      "description": "海南特色冰品，消暑解渴",
+      "price_range": "15-25元/碗"
+    }
+  ],
+  "accommodation": {
+    "budget": "经济型酒店 200-400元/晚",
+    "mid_range": "海景酒店 500-1000元/晚",
+    "luxury": "五星度假酒店 1500-5000元/晚"
+  },
+  "transportation": {
+    "from_beijing": "飞机直飞约4.5小时，票价 1000-2500元",
+    "from_shanghai": "飞机直飞约3小时，票价 800-2000元",
+    "local": "出租车起步价 8元，公交 1-5元"
+  },
+  "tips": [
+    "防晒必备：SPF50+防晒霜、遮阳帽",
+    "水上项目注意安全，听从教练指导",
+    "海鲜建议去第一市场自己买，加工店加工",
+    "避开春节和寒暑假，价格更划算"
+  ]
+}
