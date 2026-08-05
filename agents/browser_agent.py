@@ -1,7 +1,7 @@
 """
 Browser Agent - 基于开源 browser-use 的浏览器自动化 Agent
 用作 MCP 工具的兜底策略，处理复杂的网页交互任务
-支持多种 LLM API：百度 OneAPI、英伟达、DeepSeek 等
+支持多种 LLM API：DeepSeek、OpenAI、英伟达等
 """
 import os
 import sys
@@ -52,7 +52,7 @@ class BrowserAgent:
         初始化 BrowserAgent
 
         Args:
-            llm_provider: LLM 提供商（baidu_oneapi, nvidia, deepseek, openai, custom）
+            llm_provider: LLM 提供商（deepseek, openai, nvidia, custom）
                          默认从环境变量 DEFAULT_LLM_PROVIDER 读取，或自动检测
             api_key: API Key（优先级高于环境变量）
             base_url: API 端点（优先级高于环境变量）

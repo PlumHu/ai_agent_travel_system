@@ -25,7 +25,7 @@ class IntelligentAgent:
         self.rag_memory = RAGMemorySystem()
 
         # 初始化 LLM
-        self.llm = LLMConfig(provider="baidu_oneapi")
+        self.llm = LLMConfig(provider="deepseek")
 
     def process_query(self, user_query: str) -> str:
         """处理用户查询"""

@@ -25,7 +25,7 @@ class PsychologyAgent(BaseAgent):
         初始化 PsychologyAgent
 
         Args:
-            llm_provider: LLM 提供商（baidu_oneapi/nvidia/deepseek/openai）
+            llm_provider: LLM 提供商（deepseek/openai/nvidia/custom）
             rag: 可选的共享 RAGManager（psychology_knowledge 集合）
         """
         super().__init__("PsychologyAgent")

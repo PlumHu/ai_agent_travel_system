@@ -1,6 +1,6 @@
 """
 统一 LLM 配置管理器
-支持多种 LLM API：百度 OneAPI、英伟达、DeepSeek、OpenAI 等
+支持多种 LLM API：DeepSeek、OpenAI、英伟达 NIM、自定义 OpenAI 兼容接口等
 """
 import os
 from typing import Optional, Dict, Any, List
@@ -13,22 +13,8 @@ logger = logging.getLogger(__name__)
 class LLMConfig:
     """LLM 配置类"""
 
-    # 预设的 LLM 提供商配置
+    # 预设的 LLM 提供商配置（不含百度 LLM；百度地图见 BAIDU_MAPS_API_KEY）
     PROVIDERS = {
-        "baidu_oneapi": {
-            "name": "百度 OneAPI（内部集成）",
-            "base_url": "https://oneapi-comate.baidu-int.com/v1",
-            "default_model": "ERNIE-4.0-8K",
-            "env_key": "BAIDU_ONEAPI_KEY",
-            "env_model": "BAIDU_ONEAPI_MODEL"
-        },
-        "nvidia": {
-            "name": "英伟达 NIM",
-            "base_url": "https://integrate.api.nvidia.com/v1",
-            "default_model": "meta/llama-3.1-70b-instruct",
-            "env_key": "NVIDIA_API_KEY",
-            "env_model": "NVIDIA_MODEL"
-        },
         "deepseek": {
             "name": "DeepSeek",
             "base_url": "https://api.deepseek.com/v1",
@@ -43,13 +29,12 @@ class LLMConfig:
             "env_key": "OPENAI_API_KEY",
             "env_model": "OPENAI_MODEL"
         },
-        "qianfan": {
-            "name": "百度千帆",
-            "base_url": "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop",
-            "default_model": "ernie-bot-4",
-            "env_key": "QIANFAN_API_KEY",  # 或使用 AK/SK
-            "env_model": "QIANFAN_MODEL",
-            "note": "千帆需要特殊认证，暂不支持 OpenAI SDK"
+        "nvidia": {
+            "name": "英伟达 NIM",
+            "base_url": "https://integrate.api.nvidia.com/v1",
+            "default_model": "meta/llama-3.1-70b-instruct",
+            "env_key": "NVIDIA_API_KEY",
+            "env_model": "NVIDIA_MODEL"
         },
         "custom": {
             "name": "自定义 OpenAI 兼容接口",
@@ -63,7 +48,7 @@ class LLMConfig:
 
     def __init__(
         self,
-        provider: str = "baidu_oneapi",
+        provider: str = "deepseek",
         api_key: Optional[str] = None,
         base_url: Optional[str] = None,
         model: Optional[str] = None
@@ -72,7 +57,7 @@ class LLMConfig:
         初始化 LLM 配置
 
         Args:
-            provider: 提供商名称（baidu_oneapi, nvidia, deepseek, openai, custom）
+            provider: 提供商名称（deepseek, openai, nvidia, custom）
             api_key: API Key（优先级高于环境变量）
             base_url: API 端点（优先级高于环境变量）
             model: 模型名称（优先级高于环境变量）
@@ -254,12 +239,12 @@ if __name__ == "__main__":
         print("  ⚠️ 无可用提供商，请配置环境变量")
 
     # 示例：创建配置
-    print("\n示例 1: 使用百度 OneAPI")
+    print("\n示例 1: 使用 DeepSeek")
     try:
         llm = LLMConfig(
-            provider="baidu_oneapi",
+            provider="deepseek",
             api_key="your_key_here",
-            model="ERNIE-4.0-8K"
+            model="deepseek-chat"
         )
         print(f"  配置成功: {llm.get_info()}")
     except ValueError as e:

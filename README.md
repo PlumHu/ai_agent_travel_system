@@ -14,7 +14,7 @@
 | **混合检索（难点）** | 向量检索 + BM25，用 RRF（倒排分数融合，k=60）加权融合排序（`knowledge/retriever.py`） | 兼顾语义相似与关键词精确 |
 | **三级降级策略** | 每个工具：真实 API → DuckDuckGo 搜索 → Mock/参考链接 | 无 API Key 也能跑，永不崩 |
 | **MCP 协议集成** | 统一管理天气、百度地图、brave 搜索、文件系统 server | 标准化工具接入 |
-| **多 LLM 适配** | `LLMConfig` 统一 OpenAI 兼容接口，支持百度/英伟达/DeepSeek/OpenAI | 一键切换模型 |
+| **多 LLM 适配** | `LLMConfig` 统一 OpenAI 兼容接口，支持 DeepSeek/OpenAI/英伟达等 | 一键切换模型 |
 | **三层 Memory** | 短期（deque 对话窗口）+ 长期（JSON 持久化偏好）+ 语义（RAG） | 个性化上下文 |
 | **兜底机制** | MCP/搜索全失败时，browser-use 控制真实浏览器抓取 | 极端可用性 |
 | **反思自纠错** | `ReflectionMixin` + 验证器 + LangGraph 回环边，输出不合格自动重试 | Agent 区别于 Chain 的核心 |
@@ -52,7 +52,7 @@
 基于 AI Agent 的智能旅行规划系统，能够根据用户的时间、预算、偏好等需求，智能推荐旅行目的地、生成行程规划，并提供实时天气、地图、搜索等信息支持。
 
 **核心特性**：
-- 支持多种主流 LLM（百度 OneAPI、英伟达 NIM、DeepSeek、OpenAI 等）
+- 支持多种主流 LLM（DeepSeek、OpenAI、英伟达 NIM 等）
 - 真实 API 优先，失败自动降级（OpenWeather → DuckDuckGo → Mock）
 - RAG 检索增强 + Memory 记忆系统（ChromaDB + sentence-transformers）
 - MCP 协议集成（天气、百度地图、搜索）
@@ -121,17 +121,16 @@ playwright install chromium
 
 ```env
 # 1. 选择提供商（改这行）
-DEFAULT_LLM_PROVIDER=deepseek          # openai | deepseek | nvidia | baidu_oneapi | custom
+DEFAULT_LLM_PROVIDER=deepseek          # openai | deepseek | nvidia | custom
 
 # 2. 填入对应的 Key（取消注释 + 填入，其他提供商无需改动）
 DEEPSEEK_API_KEY=sk-你的key            # DeepSeek：https://platform.deepseek.com/api_keys
 # OPENAI_API_KEY=sk-你的key           # OpenAI
 # NVIDIA_API_KEY=nvapi-你的key        # NVIDIA NIM：https://build.nvidia.com/
-# BAIDU_ONEAPI_KEY=你的key            # 百度内部员工
 
 # 工具 API（可选，不填自动降级）
 # OPENWEATHER_API_KEY=你的key         # 天气，openweathermap.org 免费注册
-# BAIDU_MAPS_API_KEY=你的key          # 路线，lbsyun.baidu.com
+# BAIDU_MAPS_API_KEY=你的key          # 路线，lbsyun.baidu.com（百度地图保留）
 # BRAVE_SEARCH_API_KEY=BSA你的key     # 搜索增强，api.search.brave.com 免费2000次/月
 ```
 
@@ -175,10 +174,9 @@ result = manager.run_agent("recommend", {
 
 | 提供商 | provider 参数 | 默认模型 | 环境变量 |
 |-------|--------------|---------|---------|
-| 百度 OneAPI | `baidu_oneapi` | ERNIE-4.0-8K | `BAIDU_ONEAPI_KEY` |
-| 英伟达 NIM | `nvidia` | llama-3.1-70b | `NVIDIA_API_KEY` |
 | DeepSeek | `deepseek` | deepseek-chat | `DEEPSEEK_API_KEY` |
 | OpenAI | `openai` | gpt-4 | `OPENAI_API_KEY` |
+| 英伟达 NIM | `nvidia` | llama-3.1-70b | `NVIDIA_API_KEY` |
 | 自定义 | `custom` | 自定义 | `CUSTOM_API_KEY` |
 
 **自动检测**：

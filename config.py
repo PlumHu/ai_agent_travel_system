@@ -38,12 +38,6 @@ _PROVIDERS = {
         "NVIDIA_MODEL",
         "meta/llama-3.1-70b-instruct",
     ),
-    "baidu_oneapi": (
-        "BAIDU_ONEAPI_KEY",
-        "https://oneapi-comate.baidu-int.com/v1",
-        "BAIDU_ONEAPI_MODEL",
-        "ERNIE-4.0-8K",
-    ),
     "custom": (
         "CUSTOM_API_KEY",
         os.getenv("CUSTOM_BASE_URL", ""),
@@ -52,7 +46,7 @@ _PROVIDERS = {
     ),
 }
 
-_DEFAULT_PRIORITY = ["deepseek", "openai", "nvidia", "baidu_oneapi", "custom"]
+_DEFAULT_PRIORITY = ["deepseek", "openai", "nvidia", "custom"]
 _preferred = os.getenv("DEFAULT_LLM_PROVIDER", "").lower()
 
 

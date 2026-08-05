@@ -21,7 +21,7 @@ class FoodAgent(BaseAgent):
         初始化 FoodAgent
 
         Args:
-            llm_provider: LLM 提供商（baidu_oneapi/nvidia/deepseek/openai）
+            llm_provider: LLM 提供商（deepseek/openai/nvidia/custom）
         """
         super().__init__("FoodAgent")
         self._llm = None

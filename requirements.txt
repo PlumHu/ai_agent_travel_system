@@ -35,7 +35,7 @@ pytest-asyncio>=0.23.6
 browser-use>=0.1.10
 playwright>=1.44.0
 
-# LLM SDK（OpenAI 兼容接口，支持 OpenAI/DeepSeek/英伟达 NIM/百度 OneAPI）
+# LLM SDK（OpenAI 兼容接口，支持 OpenAI/DeepSeek/英伟达 NIM/自定义）
 openai>=1.30.0
 
 # 长期记忆可选后端（backend="mem0"；不装则默认 SqliteStore，自动降级）
